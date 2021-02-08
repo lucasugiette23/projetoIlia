@@ -46,8 +46,6 @@ public class PointControllerTests {
                 .contentType(String.valueOf(HttpStatus.UNAUTHORIZED))
                 .content(String.valueOf(ResponseEntity.status(HttpStatus.UNAUTHORIZED))))
                 .andExpect(content().string(String.valueOf(HttpStatus.UNAUTHORIZED)));
-//        ResponseEntity<?> ponto = this.pointController.checkPoint(1L, "FIRSTOUTYPE");
-//        assertEquals(HttpStatus.CREATED, ponto.getStatusCode());
     }
 
     private boolean mountResponseValidDayOfWeek(){
@@ -58,24 +56,3 @@ public class PointControllerTests {
 
 }
 
-//    private void callRestFailure() throws Exception {
-//        mvc.perform(post(URL)
-//                .header("Origin", "*")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(gson.toJson(this.mountPayload(false))))
-//                .andExpect(content().string(containsString("\"status\":401")));
-//
-//    }
-//
-//    private LoginDTO mountPayload(Boolean success) {
-//        return LoginDTO.builder()
-//                .dealership(success ? "ENERGISA" : "FLEXPAG")
-//                .ni("24432296453")
-//                .password("123456")
-//                .build();
-//
-//    }
-//   this.mockMvc.perform(get("/ponto/bater-ponto/1/FIRSTOUTYPE")
-//           .contentType(MediaType.APPLICATION_JSON)
-//           .content(String.valueOf(ResponseEntity.status(HttpStatus.CREATED))))
-//           .andExpect((ResultMatcher) ResponseEntity.status(HttpStatus.CREATED));

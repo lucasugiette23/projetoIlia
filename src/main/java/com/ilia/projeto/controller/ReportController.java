@@ -40,7 +40,7 @@ public class ReportController {
         try{
             return new ResponseEntity(this.reportService.reportByMonth(month), HttpStatus.OK);
         }catch (Exception e){
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(HttpStatus.BAD_REQUEST, HttpStatus.valueOf(e.getMessage()));
         }
 
     }
