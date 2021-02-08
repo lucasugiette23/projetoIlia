@@ -22,6 +22,8 @@ public class Project {
 
     private Long hoursDedicated;
 
+    private String name;
+
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
